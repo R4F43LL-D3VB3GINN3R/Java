@@ -1,0 +1,694 @@
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+1 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+        int a = 5 + 8 * 6;
+        int b = (55 + 9) % 9;
+        int c = 20 + - 3 * 5 / 8;
+        int d = 5 + 15 / 3 * 2 - 8 % 3;
+        
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+2 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+    int num1 = 2;
+    int num2 = 8;
+    int soma = num1 + num2;
+    int subtracao = num1 - num2;
+    int multiplicacao = num1 * num2;
+    int divisao = num1 / num2;
+    int resto = num2 / num1;
+    
+    System.out.println(soma);
+    System.out.println(subtracao);
+    System.out.println(multiplicacao);
+    System.out.println(divisao);
+    System.out.println(resto);
+      
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+3 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+        int num;
+        int res;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.printf("Insira um numero para ver a sua tabuada: ");
+        num = scanner.nextInt();
+        
+        for (int i=1; i<=10; i++) {
+            
+            res = num * i;
+            System.out.println(num + " X " + i + " = " + res);
+            
+        }
+      
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+4 - 
+
+package com.mycompany.demo002;
+import java.text.DecimalFormat;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+        double raio = 5;
+        double area = 3.14 * raio * raio;
+        
+        String formatarea = String.format("%.2f", area);
+        System.out.println("A área do círculo é: " + formatarea);
+        
+        double perimetro = (2 * 3.14) * raio;
+        
+        String formatperimetro = String.format("%.2f", perimetro);
+        System.out.println("O períemtro do círculo é: " + formatperimetro);
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+5 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+        char vec[] = { '2', '5' }; 
+        
+        int num1 = Character.getNumericValue(vec[0]);
+        int num2 = Character.getNumericValue(vec[1]);
+        int res = num1 + num2;
+        
+        System.out.println(res);
+        
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+6 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+       int num1, num2, num3;
+       Scanner scanner = new Scanner(System.in);
+       
+       System.out.printf("Primeiro Numero: ");
+       num1 = scanner.nextInt();
+       
+       System.out.printf("Segundo Numero: ");
+       num2 = scanner.nextInt();
+       
+       System.out.printf("Terceiro Numero: ");
+       num3 = scanner.nextInt();
+       
+       int media = num1 + num2 + num3 / 3;     
+       
+       System.out.println(media);
+        
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+7 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+       int num1 = 2;
+       int num2 = 3;
+       int aux = 0;
+       
+       System.out.println("num1 = " + num1);
+       System.out.println("num2 = " + num2);
+       
+       aux = num1;
+       num1 = num2;
+       num2 = aux;
+       
+       System.out.println("num1 = " + num1);
+       System.out.println("num2 = " + num2);
+        
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+8 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+       int num1;
+       int num2;
+       int num3;
+       
+       Scanner scanner = new Scanner(System.in);
+       
+       System.out.printf("Numero 1: ");
+       num1 = scanner.nextInt();
+               
+       System.out.printf("Numero 2: ");
+       num2 = scanner.nextInt();
+               
+       System.out.printf("Numero 3: "); 
+       num3 = scanner.nextInt();
+       
+       if (num1 > num2 && num2 > num3) {
+           
+           System.out.println(num1 + " maior do que " + num2 + " e " + num2 + " maior do que " + num3);
+           
+       } else if (num2 > num1 && num1 > num3) {
+        
+           System.out.println(num2 + " maior do que " + num1 + " e " + num1 + " maior do que " + num3);  
+        
+       } else if (num1 == num2 && num1 > num3) {
+            
+           System.out.println(num1 + " igual a " + num2 + " e " + " maiores do que " + num3);
+           
+       } else if (num2 == num3 && num2 > num1) {
+            
+           System.out.println(num2 + " igual a " + num3 + " e " + " maiores do que " + num1);
+           
+       } else if (num1 == num3 && num1 > num2) {
+                  
+           System.out.println(num1 + " igual a " + num3 + " e " + " maiores do que " + num2);
+           
+       } else if (num3 > num2 && num2 > num1) {
+                  
+           System.out.println(num3 + " maior do que " + num2 + " e " + num2 + " maior do que " + num1);
+           
+       } else if (num1 == num2 && num3 > num1) {
+                  
+           System.out.println(num1 + " igual a " + num2 + " e " + num3 + " maior do que " + num1);
+           
+       } else {
+                
+           System.out.println("Os três números são iguais");  
+           
+        }
+        
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+9 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+    int num1;
+    Scanner scanner = new Scanner(System.in);
+     
+    System.out.printf("Insira um número da semana: ");
+    num1 = scanner.nextInt();
+
+    switch (num1) {
+        
+        case 1:
+        System.out.println("Domingo");
+        break;
+        
+        case 2:
+        System.out.println("Segunda-Feira");
+        break;
+        
+        case 3:
+        System.out.println("Terça-Feira");
+        break; 
+        
+        case 4:
+        System.out.println("Quarta-Feira");
+        break;
+        
+        case 5:
+        System.out.println("Quinta-Feira");
+        break;
+        
+        case 6:
+        System.out.println("Sexta-Feira");
+        break;
+        
+        case 7:
+        System.out.println("Sábado");
+        break;
+        
+        default:
+        System.out.println("Não existe dia referente a este número");
+        break;
+    }
+    
+        
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+10 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+    int ano;
+    int mes;
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.printf("Insira o ano: ");
+    ano = scanner.nextInt();
+    
+    System.out.printf("Insira o numero do mês: ");
+    mes = scanner.nextInt();
+    
+    int janeiro = 31;
+    int fevereiro = 28;
+    int marco = 31;
+    int abril = 30;
+    int maio = 31;
+    int junho = 30;
+    int julho = 31;
+    int agosto = 31;
+    int setembro = 30;
+    int outubro = 31;
+    int novembro = 30;
+    int dezembro = 31;
+    
+    if (ano % 400 == 0) {
+        
+        System.out.println("O ano é: " + ano + " e é bissexto.");
+        fevereiro = 29;
+        
+    } else {
+        
+        System.out.println("O ano é: " + ano);
+        
+    }
+    
+    if (mes == 1) {
+        
+        System.out.println("O mês é Janeiro, e tem " + janeiro + " dias." );
+        
+    } else if (mes == 2) {
+        
+        System.out.println("O mês é Fevereiro, e tem " + fevereiro + " dias." );
+        
+    } else if (mes == 3) {
+        
+        System.out.println("O mês é Março, e tem " + marco + " dias." );
+        
+    } else if (mes == 4) {
+        
+        System.out.println("O mês é Abril, e tem " + abril + " dias." );
+        
+    } else if (mes == 5) {
+        
+        System.out.println("O mês é Maio, e tem " + maio + " dias." );
+        
+    } else if (mes == 6) {
+        
+        System.out.println("O mês é Junho, e tem " + junho + " dias." );
+        
+    } else if (mes == 7) {
+        
+        System.out.println("O mês é Julho, e tem " + julho + " dias." );
+        
+    } else if (mes == 8) {
+        
+        System.out.println("O mês é Agosto, e tem " + agosto + " dias." );
+        
+    } else if (mes == 9) {
+        
+        System.out.println("O mês é Setembro, e tem " + setembro + " dias." );
+        
+    } else if (mes == 10) {
+        
+        System.out.println("O mês é Outubro, e tem " + outubro + " dias." );
+        
+    } else if (mes == 11) {
+        
+        System.out.println("O mês é Novembro, e tem " + novembro + " dias." );
+        
+    } else if (mes == 12) {
+        
+        System.out.println("O mês é Dezembro, e tem " + dezembro + " dias." );
+        
+    } else {
+        
+        System.out.println("Este mês não pertence ao calendário.");
+          
+    }
+    
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+11 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+    //11) Crie  um  programa  que  permita  classificar  um  triângulo,  quanto  aos  lados  (escaleno  –  lados  todos diferentes, isósceles – dois lados iguais ou equilátero). 
+    
+    int lado1;
+    int lado2;
+    int lado3;
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.printf("Digite o primeiro lado do triângulo: ");
+    lado1 = scanner.nextInt();
+    
+    System.out.printf("Digite o segundo lado do triângulo: ");
+    lado2 = scanner.nextInt();
+    
+    System.out.printf("Digite o terceiro lado do triângulo: ");
+    lado3 = scanner.nextInt();
+    
+    if (lado1 == lado2 && lado1 == lado3) {
+        
+        System.out.println("O triângulo é Equilátero");
+        
+    } else if (lado1 == lado2 || lado2 == lado3) {
+        
+        System.out.println("O triângulo é Isósceles");
+        
+    } else {
+        
+        System.out.println("O triângulo é Escaleno");
+        
+    }
+    
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+12 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+    long num;
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.printf("Digite um número: ");
+    num = scanner.nextLong();
+    
+    if (num < 0) {
+        
+        System.out.println("Insira um número positivo");
+        
+    } else if (num > 1000000000) {
+        
+        System.out.println("Número excedeu o tamanho em dígitos");
+        
+    } else {
+        
+        if (num < 10) {
+            
+            System.out.println("O número tem um dígito");
+            
+        } else if (num < 100) {
+            
+            System.out.println("O número tem dois dígitos");
+            
+        } else if (num < 1000) {
+            
+            System.out.println("O número tem três dígitos");
+            
+        } else if (num < 10000) {
+            
+            System.out.println("O número tem quatro dígitos");
+            
+        } else if (num < 100000) {
+            
+            System.out.println("O número tem cinco dígitos");
+          
+        } else if (num < 1000000) {
+            
+            System.out.println("O número tem seis dígitos");
+            
+        } else if (num < 10000000) {
+            
+            System.out.println("O número tem sete dígitos");
+            
+        } else if (num < 100000000) {
+            
+            System.out.println("O número tem oito dígitos");
+            
+        } else if (num < 1000000000) {
+            
+            System.out.println("O número tem nove dígitos");
+            
+        } else {
+            
+            System.out.println("O número tem dez dígitos");
+            
+        }
+        
+    }
+    
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+13 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+    int num;
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.printf("Digite um número: ");
+    num = scanner.nextInt();
+    
+    for (int i=0; i<=num; i++) {
+        
+        if (i % 2 != 0) {
+            
+            System.out.printf(i + " ");
+            
+        }     
+        
+    }
+    
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+14 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+    int pass;
+    int i = 3;
+    Scanner scanner = new Scanner(System.in);
+    
+    while (i > 0) {
+        
+        System.out.printf("Digite a palavra-passe: ");
+        pass = scanner.nextInt();
+    
+        switch (pass) {
+
+            case 1234:
+
+                System.out.println("Bem-vindo");
+                break;
+
+            default:
+                
+                i--;
+                System.out.println("Você errou a palavra-passe");
+                System.out.println("Você ainda tem " + i + " tentativas.");
+                
+                switch (i) {
+                    
+                    case 0:
+                    
+                    break;
+                    
+                }
+
+            }
+    
+        }
+    
+    System.out.println("Fim do Programa");
+    
+    }
+    
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------
+
+15 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static void main(String[] args) {
+        
+        int numlinhas;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Quantas linhas deve ter o seu triângulo?: ");
+        numlinhas = scanner.nextInt();
+        
+        if (numlinhas < 0) {
+
+            System.out.println("Insira um número positivo.");
+
+        } else if (numlinhas == 0) {
+
+            System.out.println("Não há triângulo a ser apresentado com zero linhas.");
+
+        } else {
+            
+            for (int linha = 1; linha <= numlinhas; linha++) {
+                
+                for (int numero = 1; numero <= linha; numero++) {
+
+                    System.out.print(numero + " ");
+
+                }
+
+                System.out.println();
+            }
+
+        }
+
+    }
+
+}
+
+#---------------------------------------------------
+#---------------------------------------------------
+#---------------------------------------------------

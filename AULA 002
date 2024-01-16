@@ -1,0 +1,223 @@
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+01 - 
+
+package demo1;
+import java.util.Scanner;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+       
+        //int[] a  = new int[4];
+        //OUTRA MANEIRA DE FAZER UMA DECLARAÇÃO DE ARRAY
+        //int[] b;
+        //b = new int[10];
+ 
+        //DECLARANDO VÁRIOS ARRAYS
+        //int[] r = new int[44], k = new int[23];
+ 
+	//{} - inicializar valores num array
+        //int[] iniciaValores = {12,32,54,6,8,89,64,64,6};
+        
+        //1) Receba 10 números inteiros, apresente-os no ecrã e calcule o valor médio dos elementos do array;
+        
+        int[] array = new int[10];
+        int soma = 0;
+        Scanner scanner = new Scanner(System.in);
+        
+        for (int i=0; i<10; i++) {
+            
+            System.out.printf("Insira um numero para o vetor: ");
+            array[i] = scanner.nextInt();
+            
+        }
+        
+        for (int k=0; k<10; k++) {
+            
+            System.out.println(array[k]);
+            soma = soma + array[k];
+                   
+        }
+        
+        double media = soma / 10;
+        
+        System.out.println("A media e " + media);
+        
+    }
+    
+}
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+02 - 
+
+package demo1;
+import java.util.Scanner;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+        
+        int[] array = {12,32,54,6,8,89,64,64,6,17,100};
+        int elemento;
+        int cont = 0;
+        int cont2 = 0;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.printf("Insira o numero do elemento : ");
+        elemento = scanner.nextInt();
+        
+        for (int i=0; i<10; i++) {
+            
+            if (elemento == array[i]) {
+                
+                cont = cont + 1;
+                
+            } else {
+                
+                cont = 0;
+                
+            }
+            
+            
+        }
+        
+        if (cont == 1) {
+            
+            System.out.println("Elemento " + elemento + " encontrado no array");
+            
+        } else {
+            
+            System.out.println("Elemento " + elemento + " nao encontrado no array");
+            
+        }
+            
+        }
+        
+    }
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+03 - 
+
+package demo1;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+        
+        int[] array = {12,32,54,6,8,89,64,64,6,17,100};
+        int[] array2 = new int[array.length];
+        
+        for (int i=0; i<array.length; i++) {
+            
+            array2[i] = array[i];
+            
+            System.out.println(array2[i]);
+                
+        }  
+            
+    }    
+            
+}
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+04 - 
+
+package demo1;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+       
+        //int[] a  = new int[4];
+        //OUTRA MANEIRA DE FAZER UMA DECLARAÇÃO DE ARRAY
+        //int[] b;
+        //b = new int[10];
+ 
+        //DECLARANDO VÁRIOS ARRAYS
+        //int[] r = new int[44], k = new int[23];
+ 
+	//{} - inicializar valores num array
+        //int[] iniciaValores = {12,32,54,6,8,89,64,64,6};
+        
+        //3) Escreva um programa para criar uma cópia de um array;
+        
+        //4) Encontre o maior valor de um array;
+        
+        int[] array = {12,32,54,6,8,89,64,64,6,17,100};
+        int maior = 0;
+        
+        for (int i=0; i<array.length; i++) {
+            
+            for (int k=0; k<array.length - 1; k++) {
+                
+                if (array[i] > array[k + 1]) {
+                    
+                    maior = array[i];
+                    
+                }
+                
+            }
+            
+        }
+    
+        System.out.println(maior);
+            
+    }    
+            
+}
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+05 - 
+
+package demo1;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+        
+        int[] array = {12,32,54,6,8,89,64,64,6,17,100};
+        int[] array2 = {12,32,54,6,8,89,64,64,6,17,100};
+        int cont = 0;
+        
+        for (int i=0; i<array.length; i++) {
+            
+            if (array[i] == array2[i]) {
+                
+                cont++;
+                
+            }
+                    
+        }
+        
+        if (cont == array.length) {
+            
+            System.out.println("Arrays Iguais");
+            
+        } else {
+            
+            System.out.println("Arrays Diferentes");
+            
+        }
+            
+    }    
+            
+}
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------

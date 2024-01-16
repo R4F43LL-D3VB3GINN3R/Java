@@ -2,7 +2,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Java bBasic Programming Exercises
+Java Basic Programming Exercises  
 Este repositório contém soluções em Java para diversos exercícios práticos. Cada programa aborda diferentes conceitos da linguagem Java e pode ser útil para aprendizado e prática. Abaixo está uma breve descrição de cada programa:
 
 Operações Matemáticas:

@@ -79,4 +79,35 @@ Testar a igualdade de dois arrays:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AULA - 003
 
+Exerícios com Funções:
+
+1 - Crie uma função que receba um número e retorne o número sem sinal (absoluto), sem usar a função abs.
+Função para Retornar o Maior Elemento de um Vetor:
+
+2 - Crie uma função que receba um vetor de 5 inteiros e retorne o seu maior elemento.
+
+# -------------------------
+
+Exercícios com Strings:
+
+1 - Escreva um programa Java para obter o caracter no índice fornecido pelo usuário dentro da String.
+Comparar Duas Strings:
+
+2 - Escreva um programa Java para comparar duas strings recebidas do usuário.
+
+3 - Escreva um programa Java para concatenar uma determinada string no final de outra string.
+Verificar Se uma String Contém uma Sequência Específica:
+
+4 - Escreva um programa Java para testar se uma determinada string contém a sequência especificada de caracteres.
+Verificar Se uma String Termina com Outra:
+
+5 - Escreva um programa Java para verificar se uma determinada string termina com o conteúdo de outra string (utilize o método endsWith()).
+Verificar Se Duas Strings São Iguais entre Três:
+
+6 - Escreva um programa para verificar se de entre 3 strings duas delas são iguais.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

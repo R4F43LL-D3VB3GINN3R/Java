@@ -1,1 +1,79 @@
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+01 - package com.mycompany.demo002;
+
+public class Demo002 {
+    
+    public static int return_abs(int num1) {
+        
+        if (num1 < 0) {
+            
+            num1 = num1 + (-2 * num1);
+            
+        }
+
+        return num1;
+
+    }
+
+    public static void main(String[] args) {
+        
+        int varnum = -10;
+        int func = return_abs(varnum);
+        
+        System.out.println(func);
+        
+    }
+
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+02 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+
+    public static int return_maiorElemento(int[] vec) {
+        
+        int maior;
+        maior = 0;
+        
+        for (int i=0; i<vec.length; i++) {
+            
+            for (int k=0; k< vec.length - 1; k++) {
+                
+                if (vec[i] > vec[k + 1]) {
+                    
+                    maior = vec[i];
+                    
+                }
+                
+            }
+            
+        }
+        
+        return maior;
+
+    }
+
+    public static void main(String[] args) {
+        
+        int[] vec2 = {1, 2, 3, 4, 5};
+        int func = return_maiorElemento(vec2);
+        
+        System.out.println(func);
+        
+    }
+    
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
 

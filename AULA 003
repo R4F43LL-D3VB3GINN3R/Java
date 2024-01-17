@@ -77,3 +77,243 @@ public class Demo002 {
 #----------------------------------------------------------------------
 #----------------------------------------------------------------------
 
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+01 - 
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+
+    public static String return_num_c(String str, int num) {
+        
+        char char1;
+        
+        if (num >= 0 && num < str.length()) { // se o index fornecido respeita os limites de tamanho da string...
+            
+            char1 = str.charAt(num); // acessa um caractere específico em uma string em Java.
+            
+            return String.valueOf(char1); // converte o caractere para string e exibe o seu valor na hora de retorna-lo.
+            
+        } else { 
+            
+            return "Index Invalido";
+            
+        }
+        
+    }
+
+    public static void main(String[] args) {  
+        
+        String frase = "Hello World";
+        int numindex = 0;
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.printf("Digite o index: ");
+        numindex = scanner.nextInt();
+                
+        String func = return_num_c(frase, numindex);
+        
+        System.out.println(func);
+        
+    }
+    
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+02 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+
+    public static void compara_string(String str1, String str2) {
+        
+        if (str1.equals(str2)) {
+            
+            System.out.println("As strings sao iguais");
+            
+        } else {
+            
+            System.out.println("As strings sao diferentes");
+            
+        }
+        
+    }
+
+    public static void main(String[] args) {  
+        
+        String string_1;
+        String string_2;
+        
+        string_1 = "Rafael";
+        string_2 = "Rafaell";
+        
+        compara_string(string_1, string_2);
+        
+    }
+    
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+03 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+    
+    public static void concatena_string(String string1, String string2) {
+        
+        String string3;
+        
+        string3 = string1.concat(string2);
+        
+        System.out.println(string3);
+        
+    }
+
+    public static void main(String[] args) { 
+        
+        String string_1 = "Rafael ";
+        String string_2 = "Albuquerque";
+        
+        concatena_string(string_1, string_2);
+        
+    }
+    
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+04 - 
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+    
+    public static void tamanho_string(String string1) {
+        
+        int num;
+        
+        num = string1.length();
+        
+        System.out.println(num);
+        
+    }
+
+    public static void main(String[] args) { 
+        
+        String string_1;
+        
+        string_1 = "Rafael";
+        
+        tamanho_string(string_1);
+        
+    }
+    
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+05 -
+
+package com.mycompany.demo002;
+import java.util.Scanner;
+
+public class Demo002 {
+    
+    public static void strings_finais(String string1, String strfinal) {
+        
+        if (string1.endsWith(strfinal)) {
+            
+            System.out.println("A string faz parte do sufixo");
+            
+        } else {
+            
+            System.out.println("A string nao faz parte do sufixo");
+            
+        }
+        
+    }
+
+    public static void main(String[] args) { 
+        
+        String string_1 = "Rafael";
+        String string_2;
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.printf("Insira o sufixo da String: ");
+        string_2 = scanner.nextLine();
+        
+        strings_finais(string_1, string_2);
+        
+    }
+    
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+
+06 -
+
+package com.mycompany.demo002;
+
+public class Demo002 {
+    
+    public static void comparar_strings(String string1, String string2, String string3) {
+        
+        if (string1.equals(string2) && string1.equals(string3)) {
+            
+            System.out.println("Todas as strings sao iguais");
+            
+        } else if (string1.equals(string2)) {
+            
+            System.out.println(string1 + " igual a " + string2);
+            
+        } else if (string1.equals(string3)) {
+            
+            System.out.println(string1 + " igual a " + string3);
+            
+        } else if (string2.equals(string3)) {
+            
+            System.out.println(string2 + " igual a " + string3);
+            
+        } else {
+            
+            System.out.println("Todas as strings sao diferentes");
+            
+        }
+        
+    }
+
+    public static void main(String[] args) { 
+        
+        String string_1 = "Rafael";
+        String string_2 = "Rafael";
+        String string_3 = "Rafael";
+        
+        comparar_strings(string_1, string_2, string_3);
+        
+    }
+    
+}
+
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------

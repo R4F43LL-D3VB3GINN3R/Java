@@ -1,0 +1,77 @@
+//---------------------------------------------------------------------------------------------
+//-----------------------------------CLASSE LAMPADA--------------------------------------------
+//---------------------------------------------------------------------------------------------
+
+package demo1;
+import java.util.Scanner;
+
+public class Lampada { // Classe criada
+    
+    Scanner scanner = new Scanner(System.in);
+    public boolean lampada1 = false; // objeto de classe.
+    public boolean lampada2 = true;  // objeto de classe.
+    public int consumo1 = 0;         // objeto para medir o consumo das lampadas.
+    
+    
+    public void onoff(boolean lampada) { // método para dizer o estado atual da lampada.
+        
+        if (lampada == true) {
+            
+            System.out.println("A lampada esta acesa");
+            
+        } else {
+            
+            System.out.println("A lampada esta apagada");
+            
+        }
+        
+    }
+    
+    public void medir_consumo(boolean lampada, int consumo) { // método para dizer o estado atual e se a lampada é ou nao economica.
+        
+        this.onoff(lampada); // vou chamar o metodo da classe aqui, assim eu já passo o estado dela e digo se é economica.
+        
+        System.out.printf("Digite o consumo da lampada: ");
+        consumo = scanner.nextInt();
+        
+        if (consumo < 40) {
+            
+            System.out.println("A lampada" + lampada + " e economica");
+            
+        } else {
+            
+            System.out.println("A lampada " + lampada + " nao e economica");
+        
+        }
+        
+    }
+    
+}
+
+//---------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------
+
+package demo1;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+       
+        Lampada lampada = new Lampada(); // Instancia da classe.
+        
+        boolean lampada_nova = lampada.lampada1;  // variável recebe objeto da minha classe.
+        boolean lampada_velha = lampada.lampada2; // variável recebe objeto da minha classe.
+        int consumo_lampada = lampada.consumo1;   // variável recebe objeto da minha classe.
+      
+        lampada.medir_consumo(lampada_nova, consumo_lampada); // método recebe as variáveis.
+        
+        lampada.medir_consumo(lampada_velha, consumo_lampada); // método recebe as variáveis.
+            
+    }    
+            
+}
+
+//---------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------

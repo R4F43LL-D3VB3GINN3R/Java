@@ -1,0 +1,112 @@
+//..........................................................................................
+//................................CLASSE EMPREGADO..........................................
+//..........................................................................................
+
+package demo1;
+import java.util.Scanner;
+
+//..........................................................................................
+
+public class Empregado { //Classe que representa um empregado.
+    
+    Scanner scanner = new Scanner(System.in); //Instância da classe Scanner.
+    String nome;                              //Nome do empregado.
+    String departamento;                      //Departamento onde trabalha.
+    float horas_trabalhadas;                  //Quantidade de horas trabalhadas.
+    float hora_preco;                         //Preço da hora trabalhada.
+    float sal_bruto;                          //Salário Bruto.
+    float sal_base;                           //Salário Base.
+    float quant_hora_extra;                   //Qunatidade de Horas Extras Trabalhadas.
+    float hora_extra;                         //Preço da Hora Extra.
+    float bonus;                              //Valor do bonus para o departamento de direcao.
+    
+//..........................................................................................
+    
+    public void insere_dados(Empregado[] array) {  //Método para inserir dados do empregado.
+                                                   //...recebe um array para me ajudar a guardar os dados e não ter de dar todos os meus atributos como argumento.
+        
+         System.out.printf("Nome: ");
+         array[0].nome = scanner.nextLine();
+        
+         System.out.printf("Departamento: ");
+         array[0].departamento = scanner.nextLine();
+         
+         System.out.printf("Horas Trabalhadas: ");
+         array[0].horas_trabalhadas = scanner.nextFloat();
+         
+         System.out.printf("Preco da Hora: ");
+         array[0].hora_preco = scanner.nextFloat();
+         
+         System.out.printf("Quantas horas extras?: ");
+         array[0].quant_hora_extra = scanner.nextFloat();
+         
+         System.out.printf("Horas Entras Trabalhadas: ");
+         array[0].hora_extra = scanner.nextFloat();
+         
+    }
+    
+//..........................................................................................
+    
+    public void mostra_dados(Empregado[] array) {  //Método para dar display nos dados do empregado.
+                                                   //...recebe um array para me ajudar a guardar os dados e não ter de dar todos os meus atributos como argumento.
+        
+        System.out.println("Nome: " + array[0].nome);
+        System.out.println("Departamento: " + array[0].departamento);
+        System.out.println("Horas Trabalhadas: " + array[0].horas_trabalhadas);
+        System.out.println("Valor da Hora: " + array[0].hora_preco);
+        System.out.println("Salario Base: " + array[0].sal_base);
+        System.out.println("Salario Bruto: " + array[0].sal_bruto);
+        System.out.println("Quantidade de Horas Extras: " + array[0].quant_hora_extra);
+        System.out.println("Valor da Hora Extra: " + array[0].hora_extra);
+        System.out.println("Valor do Bonus: " + array[0].bonus);
+        
+    }
+    
+//..........................................................................................
+    
+    public void calcular_salario(Empregado[] array) { // Tenho gosto por desenvolver aplicação para Recursos Humanos, então resolvi me empolgar neste método.
+        
+        array[0].sal_base = array[0].hora_preco * array[0].horas_trabalhadas;                       // Salário Base = Preço da Hora * Quantidade de Horas Trabalhadas no mês.
+                                                                                                    // eu poderia usar uma constante para as horas trabalhadas no mês...mas resolvi da a liberdade
+                                                                                                    //...ao utilizador, caso o empregado tenha faltado.
+        array[0].sal_bruto = array[0].sal_base + (array[0].quant_hora_extra * array[0].hora_extra); // Salário Bruto = Salário Base + Valor total das Horas Extras.
+        
+        if ("Direcao".equals(array[0].departamento)) {                                              // Se o departamento for Direcao... 
+            
+            array[0].sal_bruto = array[0].sal_base + (float) (array[0].sal_base * 0.1);             // Salário Bruto recebe bonus de 10%.
+            array[0].bonus = (float) (array[0].sal_base * 0.1);                                     // Atributo bonus recebe o valor do Bonus.
+            
+        } 
+        
+    }
+    
+//..........................................................................................
+    
+}
+
+//..........................................................................................
+//......................................MAIN................................................
+//..........................................................................................
+
+package demo1;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+       
+        Empregado empregado = new Empregado(); // Instancia da classe.
+        Empregado[] array2 = new Empregado[1];
+        array2[0] = new Empregado();
+        
+        empregado.insere_dados(array2);
+        empregado.calcular_salario(array2);
+        System.out.println(" ");
+        empregado.mostra_dados(array2);
+            
+    }    
+            
+}
+
+//..........................................................................................
+//..........................................................................................
+//..........................................................................................

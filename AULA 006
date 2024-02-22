@@ -1,0 +1,163 @@
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+
+package demo1;
+
+public class Demo1 {
+
+    public static void main(String[] args) {
+       
+        Numeros numeros = new Numeros();
+        int num1 = 10;
+        int num2 = 5;
+        
+        numeros.inserir_numeros(num1, num2);
+                
+    }    
+            
+}
+
+//--------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+
+package demo1;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Numeros {
+    
+    Scanner scanner = new Scanner(System.in); //Instância da classe Scanner.
+    
+    public void inserir_numeros(int num1, int num2) {
+        
+        int resultado = 0;
+        
+        try {
+            
+        resultado = num1 / num2;
+        
+        System.out.print("Insira um numero: ");
+        num1 = scanner.nextInt();
+        
+        System.out.print("Insira o outro numero: ");
+        num2 = scanner.nextInt();
+        
+        } catch (ArithmeticException e) {
+            
+            System.out.println("Erro: Divisão por zero.");
+            num1 = 1;
+            num2 = 1;
+            
+            
+        } catch (InputMismatchException e) {
+            
+            System.out.println("Erro: Entrada inválida. Por favor, insira um número");
+            num1 = 1;
+            num2 = 1;
+            
+        } finally {
+            
+            System.out.println("Resultado: " + resultado);
+            System.out.println("Fim do Programa.");
+            
+        }
+        
+    }
+    
+}
+
+//--------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+
+package demo1;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Vetores {
+    
+    Scanner scanner = new Scanner(System.in); //Instância da classe Scanner.
+    int[] vetor = new int[1];
+ 
+    public void inserir_elementos (int[] vetor) {
+        
+        this.vetor = vetor;
+        int contador = 0; 
+        
+        try {
+            do {
+
+                System.out.print("Insira Elementos no Vetor: ");
+                vetor[contador] = scanner.nextInt();
+                contador++;
+
+            } while (vetor[contador] != 0);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            
+            System.out.println("Erro: Limite do Array Excedido");
+            
+        } catch (InputMismatchException e) {
+            
+            System.out.println("Erro: Valor inserido nao e Numerico");
+            
+        } finally {
+            
+            System.out.println("Programa Encerrado");
+            
+        }
+            
+    }
+
+}
+
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+
+package demo1;
+
+public class MinhaExcecao extends Exception{
+    
+}
+
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+
+package demo1;
+
+public class TesteExcecao {
+   public static void teste() throws MinhaExcecao {
+       
+        throw new MinhaExcecao(); //Instancia a classe MinhaExcecao que erda a Classe de Excecao do sistema...
+    }
+
+    public static void main(String[] args) { //Método público recebe um argumento string...
+        
+        MinhaExcecao me = null; 
+        
+        try { //Tente...
+            
+            System.out.println("try ");
+            teste();
+            
+        } catch (MinhaExcecao e) {
+            
+            System.out.println("catch ");
+            me = e;
+            
+        } finally {
+            
+            System.out.println("finally ");
+        }
+        
+        System.out.println("fim");
+    }
+    
+}
+
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------

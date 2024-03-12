@@ -1,0 +1,111 @@
+package com.mycompany.connect_db_demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Connect_DB_Demo {
+
+    public Connection conn;
+    public PreparedStatement pst;
+    
+    public void Connect() {
+        
+        try {
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Funcionario", "root", "");
+
+
+            if (conn != null) {
+
+                System.out.println("Conexão estabelecida com sucesso!");
+
+            } else {
+
+                System.out.println("Falha ao estabelecer conexão.");
+            }
+            
+        } catch (ClassNotFoundException ex) {
+
+            ex.printStackTrace();
+            System.out.println("Falha ao carregar o driver JDBC.");
+
+        } catch (SQLException ex) {
+
+            ex.printStackTrace();
+            System.out.println("Falha ao estabelecer conexão com o banco de dados.");
+        }
+        
+    }
+
+    public void insertFuncionario(String nome, String setor) {
+
+        try {
+
+            String sql = "INSERT INTO tab_funcionarios (nome, setor) VALUES (?, ?)";
+            pst = conn.prepareStatement(sql);
+
+            pst.setString(1, nome);
+            pst.setString(2, setor);
+
+            int rowsAffected = pst.executeUpdate();
+
+            if (rowsAffected > 0) {
+
+                System.out.println("Registro inserido com sucesso!");
+
+            } else {
+
+                System.out.println("Falha ao inserir registro.");
+
+            }
+
+        } catch (SQLException ex) {
+
+            ex.printStackTrace();
+            System.out.println("Erro ao executar a consulta de inserção.");
+
+        }
+
+    }
+
+    public void updateFuncionario(int id, String nome, String setor) {
+        try {
+            // Preparar a consulta SQL para atualização
+            String sql = "UPDATE tab_funcionarios SET nome = ?, setor = ? WHERE id = ?";
+            pst = conn.prepareStatement(sql);
+
+            // Atribuir os valores aos parâmetros da consulta
+            pst.setString(1, nome);
+            pst.setString(2, setor);
+            pst.setInt(3, id);
+
+            // Executar a consulta de atualização
+            int rowsAffected = pst.executeUpdate();
+
+            // Verificar se o registro foi atualizado com sucesso
+            if (rowsAffected > 0) {
+                System.out.println("Registro atualizado com sucesso!");
+            } else {
+                System.out.println("Nenhum registro atualizado.");
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Erro ao executar a consulta de atualização.");
+        }
+    }
+    
+    public static void main(String[] args) {
+         
+        Connect_DB_Demo connect = new Connect_DB_Demo();
+        connect.Connect();
+        connect.insertFuncionario("Funcionário 7", "Developer");
+        connect.updateFuncionario(1, "Funcionário 1", "CEO");
+        
+    }
+
+}
